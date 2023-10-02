@@ -1,0 +1,31 @@
+<!-- app-overlay-menu -->
+<ng-container *ngIf="isMobile">
+    <app-overlay-menu [navigationRoutes]="navigationRoutes">
+    </app-overlay-menu>
+</ng-container>
+
+<!-- main-header-component -->
+<header *ngIf="headerData" class="header">
+    <div class="header__logo">
+        <img class="header__logo-img" [src]="headerData.brand_logo.src" [alt]="headerData.brand_logo.alt">
+    </div>
+    <nav class="header__nav">
+        <ul class="header__nav-list">
+            <li *ngFor="let route of navigationRoutes" class="header__nav-item">
+                <a [routerLink]="[route.path]" class="header__nav-link">{{ route.label }}</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="header__button">
+        <button (click)="toggleMenu()" class="header__button-action">
+            <i class="header__button-icon fa-solid fa-bars"></i>
+        </button>
+    </div>
+    <ng-container *ngIf="cultures">
+        <ul>
+            <li *ngFor="let culture of cultures">{{ culture }}</li>
+        </ul>
+    </ng-container>
+
+
+</header>

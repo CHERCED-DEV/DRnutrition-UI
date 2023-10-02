@@ -1,0 +1,12 @@
+<div class="overlay-menu" [ngClass]="isOpenMenu ? 'open' : 'close'">
+    <nav class="overlay-menu__nav">
+        <ul class="overlay-menu__nav-list">
+            <li *ngFor="let route of navigationRoutes" class="overlay-menu__nav-item">
+                <a [routerLink]="[route.path]" class="overlay-menu__nav-link">{{ route.label }}</a>
+            </li>
+        </ul>
+    </nav>
+    <button (click)="toggleMenu()">
+        <span>X</span>
+    </button>
+</div>

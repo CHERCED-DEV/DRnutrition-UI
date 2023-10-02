@@ -1,0 +1,20 @@
+@import "../../../../../styles/styles.scss";
+
+.header {
+    @include container-wrap();
+}
+.header__logo {
+    width: 45px;
+    height: 45px;
+}
+.header__logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.header__nav {
+    display: none;
+}
+/* .header__button {
+
+} */

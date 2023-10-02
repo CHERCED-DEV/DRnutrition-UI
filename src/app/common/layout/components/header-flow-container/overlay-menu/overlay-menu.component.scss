@@ -1,0 +1,10 @@
+@import "../../../../../../styles/styles.scss";
+
+.overlay-menu {
+    &.open {
+        display: flex;
+    }
+    &.close {
+        display: none;
+    }
+}
