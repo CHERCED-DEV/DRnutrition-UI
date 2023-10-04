@@ -4,13 +4,14 @@ import { RouterModule } from '@angular/router';
 
 import { HeaderFlowContainerComponent } from './header-flow-container.component';
 import { OverlayMenuComponent } from './overlay-menu/overlay-menu.component';
+import { UserPanelModule } from './user-panel/user-panel.module';
 
 @NgModule({
   declarations: [
     HeaderFlowContainerComponent,
     OverlayMenuComponent,
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, UserPanelModule,],
   exports: [HeaderFlowContainerComponent],
 })
 export class HeaderFlowContainerModule {}
