@@ -5,8 +5,8 @@ import { FooterConfig, RoutesMenuNavConfig } from '../../provider/model/layout.m
 
 @Component({
   selector: 'app-footer-flow-container',
-  templateUrl: './footer-flow-container.component.html',
-  styleUrls: ['./footer-flow-container.component.scss'],
+  templateUrl: './templates/footer-flow-container.component.html',
+  styleUrls: ['./templates/footer-flow-container.component.scss'],
 })
 export class FooterFlowContainerComponent implements OnInit {
   footerData: FooterConfig | null = null;

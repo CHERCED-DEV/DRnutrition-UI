@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { copyrightConfig } from '../../../../provider/model/layout.models';
 
 @Component({
   selector: 'copyright',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./copyright.component.scss']
 })
 export class CopyrightComponent implements OnInit {
-  @Input() copyrightStaticProps: string | undefined = undefined;
+  @Input() copyrightStaticProps: copyrightConfig | undefined = undefined;
   constructor() { }
 
   ngOnInit(): void {

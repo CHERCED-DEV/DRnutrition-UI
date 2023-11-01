@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { RoutesMenuNavConfig } from '../../../provider/model/layout.models';
+import { RoutesMenuNavConfig } from 'src/app/common/layout/provider/model/layout.models';
 
 @Component({
   selector: 'menu-nav-list',
