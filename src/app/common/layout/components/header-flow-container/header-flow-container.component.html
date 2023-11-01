@@ -7,26 +7,37 @@
 <!-- main-header-component -->
 <header *ngIf="headerData" class="header">
     <div class="header__logo">
-        <img class="header__logo-img" [src]="headerData.brand_logo.src" [alt]="headerData.brand_logo.alt">
+        <img class="header__logo-img" 
+            [src]="headerData.brand_logo.src" 
+            [alt]="headerData.brand_logo.alt"
+        >
     </div>
     <nav class="header__nav">
         <ul class="header__nav-list">
             <ng-container *ngIf="navigationRoutes">
-                <li *ngFor="let route of navigationRoutes" class="header__nav-item">
-                    <a [routerLink]="[route.path]" class="header__nav-link">{{ route.label }}</a>
+                <li class="header__nav-item" 
+                    *ngFor="let route of navigationRoutes">
+                    <a class="header__nav-link" [routerLink]="[route.path]">
+                        {{ route.label }}
+                    </a>
                 </li>
             </ng-container>
         </ul>
     </nav>
     <div class="header__actions-container">
         <div class="header__button">
-            <button (click)="toggleMenu()" class="header__button-action">
+            <button class="header__button-action" 
+                (click)="toggleMenu()"
+                [attr.aria-label]="'header menu'">
                 <i class="header__button-icon fa-solid fa-bars"></i>
             </button>
         </div>
         <ng-container *ngIf="cultures">
             <ul class="header__culture-list">
-                <li class="header__culture-list-item" *ngFor="let culture of cultures">{{ culture }}</li>
+                <li class="header__culture-list-item" 
+                    *ngFor="let culture of cultures">
+                    {{ culture }}
+                </li>
             </ul>
         </ng-container>
         <ng-container *ngIf="!isMobile">

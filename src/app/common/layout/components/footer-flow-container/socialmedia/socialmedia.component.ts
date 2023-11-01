@@ -7,10 +7,9 @@ import { LinkConfig } from 'src/app/shared/models/shareable.interface';
   styleUrls: ['./socialmedia.component.scss'],
 })
 export class SocialmediaComponent implements OnInit {
-  @Input() mediaLink: LinkConfig[] | undefined = undefined;
+  @Input() socialMediaStaticProps: LinkConfig[] | undefined = undefined;
   constructor() {}
 
   ngOnInit(): void {
-
   }
 }

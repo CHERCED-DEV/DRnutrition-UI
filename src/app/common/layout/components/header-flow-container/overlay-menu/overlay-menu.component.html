@@ -1,13 +1,18 @@
 <div class="overlay-menu" 
-    [ngClass]="isOpenMenu ? 'open' : 'close'">
+        [ngClass]="isOpenMenu ? 'open' : 'close'">
     <section class="overlay-menu__actions-container">
-        <button class="overlay-menu__button" (click)="toggleMenu()">
-            <i class="overlay-menu__button-icon fa-solid fa-bars"></i>
+        <button class="overlay-menu__button" 
+                (click)="toggleMenu()"
+                [attr.aria-label]="'header menu'">
+                <i class="overlay-menu__button-icon fa-solid fa-bars"></i>
         </button>
         <nav class="overlay-menu__nav">
             <ul class="overlay-menu__nav-list">
-                <li *ngFor="let route of navigationRoutes" class="overlay-menu__nav-item">
-                    <a [routerLink]="[route.path]" class="overlay-menu__nav-link">{{ route.label }}</a>
+                <li class="overlay-menu__nav-item" 
+                    *ngFor="let route of navigationRoutes">
+                    <a class="overlay-menu__nav-link" [routerLink]="[route.path]">
+                        {{ route.label }}
+                    </a>
                 </li>
             </ul>
         </nav>

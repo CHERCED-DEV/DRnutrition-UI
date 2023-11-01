@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ButtonGeneralConfig } from 'src/app/shared/models/shareable.interface';
 
 @Component({
   selector: 'newsletter',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./newsletter.component.scss']
 })
 export class NewsletterComponent implements OnInit {
-  @Input() newsLetterStaticProps: {} | undefined = undefined;
+  @Input() newsLetterStaticProps: ButtonGeneralConfig | undefined = undefined;
   constructor() { }
 
   ngOnInit(): void {

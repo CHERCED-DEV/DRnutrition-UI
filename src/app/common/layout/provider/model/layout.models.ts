@@ -1,4 +1,5 @@
 import {
+  ButtonGeneralConfig,
   ImgsConfig,
   InputConfig,
   LinkConfig,
@@ -23,17 +24,13 @@ export interface HeaderConfig {
     }
   ];
   user_panel: LinkConfig[];
-  cultures: string[]
+  cultures: string[];
 }
 
 export interface FooterConfig {
   brand_logo: ImgsConfig;
   nav_menu: LinkConfig[];
-  newsletter: {
-    title: string;
-    input: InputConfig;
-    button: string;
-  };
+  newsletter: ButtonGeneralConfig;
   socialmedia: {
     link: LinkConfig[];
     img: ImgsConfig;

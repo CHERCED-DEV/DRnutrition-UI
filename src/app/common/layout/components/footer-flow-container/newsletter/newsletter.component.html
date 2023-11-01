@@ -1,1 +1,24 @@
-<p>newsletter works!</p>
+<ng-container *ngIf="newsLetterStaticProps">
+    <div class="newsletter">
+        <h6 class="newsletter-title">
+            {{newsLetterStaticProps.title}}
+        </h6>
+        <div class="newsletter-content">
+            <label class="newsletter-content_label" 
+                    for="newsletterInput">
+                {{newsLetterStaticProps.input.placeholder}} 
+            </label>
+            <input class="newsletter-content_input" 
+                    id="newsletterInput" 
+                    placeholder="{{newsLetterStaticProps.input.placeholder}}" 
+                    type="{{newsLetterStaticProps.input.type}}">
+            <button class="newsletter-content_button"
+                    [attr.aria-label]="newsLetterStaticProps.title">
+                <img class="newsletter-content_button-img" 
+                    src="icono.png" 
+                    alt="Suscribirse">
+                    {{newsLetterStaticProps.button}}
+            </button>
+        </div>
+    </div>
+</ng-container>

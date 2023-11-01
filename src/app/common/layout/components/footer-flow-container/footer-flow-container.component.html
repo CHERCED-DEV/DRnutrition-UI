@@ -1,20 +1,24 @@
 <footer *ngIf="footerData" class="footer">
     <section class="footer_about">
         <ng-container *ngIf="footerData.socialmedia">
-            <socialmedia [mediaLink]="footerData.socialmedia.link">
+            <socialmedia 
+                [socialMediaStaticProps]="footerData.socialmedia.link">
             </socialmedia>
         </ng-container>
         <ng-container *ngIf="footerData.newsletter">
-            <newsletter [newsLetterStaticProps]="footerData.newsletter">
+            <newsletter 
+                [newsLetterStaticProps]="footerData.newsletter">
             </newsletter>
         </ng-container>
     </section>
-    <section *ngIf="navigationRoutes" class="footer_nav">
-        <menu-nav-list [navigationRoutes]="navigationRoutes">
+    <section class="footer_nav" *ngIf="navigationRoutes">
+        <menu-nav-list 
+            [navigationRoutes]="navigationRoutes">
         </menu-nav-list>
     </section>
-    <section *ngIf="footerData.copyright" class="footer_copyrigth">
-        <copyright [copyrightStaticProps]="footerData.copyright">
+    <section class="footer_copyrigth" *ngIf="footerData.copyright" >
+        <copyright 
+            [copyrightStaticProps]="footerData.copyright">
         </copyright>
     </section>
 </footer>

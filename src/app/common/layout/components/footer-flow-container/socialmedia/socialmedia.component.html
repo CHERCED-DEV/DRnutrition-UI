@@ -1,1 +1,9 @@
-<p>socialmedia works!</p>
+<ng-container *ngIf="socialMediaStaticProps">
+    <ul class="socialmedia-list">
+        <li class="socialmedia-list_item" *ngFor="let socialmedia of socialMediaStaticProps">
+            <a class="socialmedia-item-ancor" [href]="socialmedia.href">
+                {{socialmedia.label}}
+            </a>
+        </li>
+    </ul>
+</ng-container>
